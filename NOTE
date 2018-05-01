@@ -1,0 +1,31 @@
+np.load loadtxt
+np.save
+image_array=Image.open(image_path + img_name)
+image_list.append(image_array.getdata())
+train_dataSets=np.hstack((image_list,label_list))
+train_dataSets=shuffle(np.array(train_dataSets))
+if os.path.exists(self.dirtrain_dataSets_with_shuffle_1_channels.npy"):
+os.system("rm /home/naruto/Pychknifey_spoony_dtrain_dataSets_with_shuffle_1_channels.npy")
+os._exit(0)
+# Image.fromarray(np.reshape(np.matrix(train_images[0]),[200,200])).show()
+from sklearn.utils import shuffle
+from PIL import Image
+sess = tf.InteractiveSession()
+sess.run(tf.Print(sparse_labels,[sparse_labels]))
+sparse_labels = tf.to_int32(sparse_labels)
+train_dataSets=shuffle(np.array(train_dataSets))#可设置seed
+print(tf.Tensor.get_shape(img))
+img=img.set_shape([120000])#mnist dataset
+[b,g,r]=[cv2.split(img[i])[0],cv2.split(img[i])[1],cv2.split(img[i])[2]]
+cv2.imwrite('%d.png'%i,cv2.merge([r,g,b]))
+record_bytes = tf.image.decode_image(value,channels=3)
+distorted_image = tf.random_crop(reshaped_image, [height, width,3])
+distorted_image = tf.image.random_flip_left_right(distorted_image)
+distorted_image = tf.image.random_brightness(distorted_image,max_delta=63)
+distorted_image = tf.image.random_contrast(distorted_image,lower=0.2, upper=1.8)
+float_image = tf.image.per_image_standardization(distorted_image)
+img = misc.imread(img_path)#image path
+img1 = misc.imresize(img,[200,200,3])
+
+
+
