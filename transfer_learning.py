@@ -56,6 +56,7 @@ x=Flatten()(base_model.layers[172].output)#不必指定Input,或者base_model的
 x = Dropout(0.25)(x)
 x = Dense(3, activation='softmax')(x)
 model = Model(base_model.input, x)
+model.summary()
 
 # ＃这里不是ｆａｌｓｅ那么就是整个网络重新训练易导致ＯＯＭ
 # for layer in base_model.layers:
@@ -77,7 +78,7 @@ for layer in base_model.layers[:172]:
    layer.trainable = False
 for layer in base_model.layers[172:]:
    layer.trainable = True
-for i ,layer in enumerate(base_model.layers):
+for i ,layer in enumerate(model.layers):
     print("layer_{0}:\t{1}\t{2}".format(i,layer.trainable, layer.name))
 
 model.compile(optimizer='adadelta',
